@@ -92,6 +92,8 @@ ypred=clf.predict(xtest)
 
 print('Akurasi DTRee = ', metrics.accuracy_score(ytest,ypred)*100)
 
+print(metrics.classification_report(ytest,ypred))
+
 """KNN"""
 
 from sklearn.preprocessing import StandardScaler
@@ -107,3 +109,5 @@ classifier.fit(xtrain,ytrain)
 ypred=classifier.predict(xtest)
 
 print('Akurasi KNN = ', metrics.accuracy_score(ytest,ypred)*100)
+
+print(metrics.classification_report(ytest,ypred))
